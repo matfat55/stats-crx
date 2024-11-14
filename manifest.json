@@ -1,20 +1,12 @@
+// manifest.json
 {
   "manifest_version": 3,
-  "name": "Silly Stats Tracker",
+  "name": "Web Activity Stats Tracker",
   "version": "1.0",
-  "description": "Track silly stats like clicks, keystrokes, distance scrolled, and pages viewed!",
-  "permissions": [
-    "storage",
-    "activeTab",
-    "scripting"
-  ],
+  "description": "Tracks various silly stats about your web browsing activity",
+  "permissions": ["storage", "tabs"],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icon.png",
-      "48": "icon.png",
-      "128": "icon.png"
-    }
+    "default_popup": "popup.html"
   },
   "background": {
     "service_worker": "background.js"
@@ -24,10 +16,5 @@
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
-  ],
-  "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
-  }
+  ]
 }
